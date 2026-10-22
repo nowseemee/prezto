@@ -62,6 +62,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gcfS='git commit --amend --reuse-message HEAD --gpg-sign'
   alias gcF='git commit --verbose --amend'
   alias gcFS='git commit --verbose --amend --gpg-sign'
+  alias gcrd='git commit --amend --no-edit --reset-author'
   alias gcp='git cherry-pick --ff'
   alias gcP='git cherry-pick --no-commit'
   alias gcr='git revert'
@@ -203,7 +204,9 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
 
   # Push (p)
   alias gp='git push'
-  alias gpf='git push --force-with-lease'
+  alias gpo='git push origin HEAD'
+  alias gpox='git push origin HEAD --force-with-lease'
+  alias gpf='git push origin HEAD --force-with-lease'
   alias gpF='git push --force'
   alias gpa='git push --all'
   alias gpA='git push --all && git push --tags'
